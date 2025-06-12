@@ -4,7 +4,7 @@ services:
     env: python
     plan: free
     buildCommand: ""
-    startCommand: python bot.py
+    startCommand: python KaligulaTiketsMonitor/bot.py
     autoDeploy: true
 
   - type: worker
@@ -12,5 +12,5 @@ services:
     env: python
     plan: free
     buildCommand: ""
-    startCommand: python monitor.py
+    startCommand: python KaligulaTiketsMonitor/monitor.py
     autoDeploy: true
