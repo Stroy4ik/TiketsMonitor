@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: telegram-bot
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python bot.py
+    autoDeploy: true
+
+  - type: worker
+    name: telegram-monitor
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python monitor.py
+    autoDeploy: true
