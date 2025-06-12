@@ -85,4 +85,8 @@ if __name__ == "__main__":
     app.add_handler(CommandHandler("unsubscribe", unsubscribe))
     app.add_handler(CallbackQueryHandler(handle_callback))
 
-    app.run_polling()
+    app.run_webhook(
+        listen="0.0.0.0",
+        port=int(os.environ.get("PORT", 8443)),
+        webhook_url="https://tiketsmonitor.onrender.com"  # 🔁 заміни на свій Render URL
+    )
